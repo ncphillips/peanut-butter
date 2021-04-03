@@ -9,8 +9,8 @@
     "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
-    "generate": "yarn prisma generate",
-    "migrate": "yarn prisma migrate dev"
+    "generate": "prisma generate",
+    "migrate": "prisma migrate dev"
   },
   "dependencies": {
     "@prisma/client": "2.20.1",
