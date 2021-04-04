@@ -4,9 +4,11 @@
 
 - Next.js
 - Typescript
-- Import[packages](#packages) directory
-- Prisma + PostgreSQL
-- next-auth
+- [Packages Directory](#packages)
+- Database: `prisma` + `postgres`
+- Authentication: `next-auth`
+- Unit Testing: `jest` + `@testing-library/react`
+- Integration Testing: `cypress` + `@testing-library/cypress`
 
 ## Database Setup
 
