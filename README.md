@@ -43,6 +43,22 @@ To learn how to work with other providers visit [the next-auth documentation](ht
 
 ## Packages
 
-This starter is stup so that anything inside of `packages` can be imported by name.
+This starter is stup so that anything inside of `packages` can be imported by name. For example:
+
+**pages/about.tsx**
+
+```diff
+-  import { Button } from "../packages/react-button"
++ import { Button } from "react-button"
+
+export function Page() {
+  return (
+    <>
+      <h1>About Us</h1>
+      <Button>Say Hi!</Button>
+    </>
+  )
+}
+```
 
 Our suggestion is that you treat the `packages` directory like a private node_modules and organize the code accordingly.
