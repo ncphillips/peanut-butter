@@ -10,29 +10,42 @@
 - Unit Testing: `jest` + `@testing-library/react`
 - Integration Testing: `cypress` + `@testing-library/cypress`
 
-## Database Setup
+## Commands
+
+| Command           | Description                              |
+| ----------------- | ---------------------------------------- |
+| yarn              | Install dependencies                     |
+| yarn dev          | Start development server                 |
+| yarn test         | Run Jest unit tests                      |
+| yarn cypress open | Open Cypress integration testing UI      |
+| yarn cypress run  | Run Cypress integration tests without UI |
+| yarn migrate      | Migrate the database                     |
+
+## Setup
+
+### Environment
+
+- Copy `.env.example` to `.env`
+
+### Database
 
 - Create PostgreSQL database
-- Copy `.env.example` to `.env`
-- Update DATABASE_URL inside `.env`
-- Migrate
-  ```
-  yarn migrate
-  ```
+- Update `DATABASE_URL` inside `.env`.
+- Run `yarn migrate`
 
-## Authentication Setup
+### Authentication
 
-This starter is setup to work with [GitHub OAuth](#github) out of the box.
+This starter uses [next-auth](https://next-auth.js.org) for authentication and is configured to work with [GitHub OAuth](#github) out of the box.
 
 To learn how to work with other providers visit [the next-auth documentation](https://next-auth.js.org/configuration/providers).
 
-### GitHub
+#### GitHub
 
 [Register a New Github OAuth Application](https://github.com/settings/applications/new) with the following information:
 
 | Field                      | Value                                   |
 | -------------------------- | --------------------------------------- |
-| Application Name           | my-app-dev                              |
+| Application Name           | your-app-name-dev                       |
 | Homepage URL               | http://localhost:3000                   |
 | Authorization callback URL | http://localhost:3000/api/auth/callback |
 
@@ -43,7 +56,21 @@ To learn how to work with other providers visit [the next-auth documentation](ht
 
 ## Packages
 
-This starter is stup so that anything inside of `packages` can be imported by name. For example:
+This starter is setup so that anything inside of `packages` can be imported directly. Treat the `packages` directory like a private `node_modules` and organize the code flatly as packages.
+
+### Example: react-button
+
+A simple `react-button` module was added to this starter to demostrate the pattern. The module contains it's tests and source code, and can be imported as it's name.
+
+**File System**
+
+```
+packages/
+  react-button/
+    index.tsx
+    react-button.tsx
+    react-button.test.tsx
+```
 
 **pages/about.tsx**
 
@@ -60,5 +87,3 @@ export function Page() {
   )
 }
 ```
-
-Our suggestion is that you treat the `packages` directory like a private node_modules and organize the code accordingly.
