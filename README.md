@@ -1,4 +1,14 @@
-# next-prisma-starter
+# Peanut Butter: A Next.js Starter
+
+> It's 3am and you just woke up from a sick dream where you're fighting dinosaurs, but you're stomach is _grumbling_.
+>
+> What do you do?
+>
+> There's only one thing to do: go to the kitch, grab a spoon, and start chowing down on a spoonfull of peanutbutter. It's not for everyone, it's certainly not optimal, but it solves your base needs and lets you go back to pursueing your dreams of fighting dinosuars.
+
+That's a metaphor.
+
+This is a Next.js starter setup with a few tools I like, configured in the way I like them. My goal with this project is to be able to spin up new side projects with as little friction as possible.
 
 ## What's Included?
 
