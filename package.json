@@ -37,5 +37,11 @@
   },
   "prettier": {
     "semi": false
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/cypress/"
+    ]
   }
 }
